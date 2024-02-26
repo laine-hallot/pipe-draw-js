@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    /> -->
+    <title>PipeDrawJs!</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="toolbar">
+        <div class="canvas-controls">
+          <button class="button" data-tool-selector="pencil">Pencil</button>
+          <button class="button" data-tool-selector="paintBrush">Brush</button>
+          <button class="button" data-tool-selector="text">Text</button>
+          <button class="button" data-tool-selector="crop">Crop</button>
+          <input type="color" id="color-selector" />
+        </div>
+        <div id="save-controls"></div>
+      </div>
+      <div class="canvas-container">
+        <div id="debug-readout">
+          <span class="selected-tool">
+            Selected tool:
+            <span class="value"></span>
+          </span>
+          <span class="x-pos">
+            X:
+            <span class="value"></span>
+          </span>
+          <span class="y-pos">
+            Y:
+            <span class="value"></span>
+          </span>
+          <span class="click-status">
+            Click:
+            <span class="value"></span>
+          </span>
+          <span class="is-in-element">
+            Is in element:
+            <span class="value"></span>
+          </span>
+          <span class="selected-color">
+            Selected color:
+            <span class="value"></span>
+          </span>
+        </div>
+        <canvas id="editor" />
+      </div>
+    </div>
+  </body>
+</html>

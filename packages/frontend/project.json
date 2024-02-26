@@ -1,0 +1,32 @@
+{
+  "name": "@pipedrawjs/frontend",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"]
+  },
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "options": {
+        "outputPath": "{workspaceRoot}/dist/frontend",
+        "webpackConfig": "{projectRoot}/webpack.config.js",
+        "tsConfig": "{projectRoot}/tsconfig.json",
+        "main": "{projectRoot}/index.ts",
+        "index": "{projectRoot}/index.html",
+        "compiler": "tsc",
+        "generateIndexHtml": false
+      },
+      "dependsOn": ["^build"],
+      "outputs": ["{workspaceRoot}/dist/frontend"]
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx webpack serve"
+      }
+    },
+    "start-but-its-broken": {
+      "executor": "@nx/webpack:dev-server"
+    }
+  }
+}

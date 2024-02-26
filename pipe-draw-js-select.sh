@@ -1,0 +1,1 @@
+scrot -s --silent - | npm start

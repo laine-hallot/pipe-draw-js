@@ -1,0 +1,13 @@
+{
+  "name": "@pipedrawjs",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "scrot -s --silent -",
+        "outputPath": "-"
+      },
+      "cache": false
+    }
+  }
+}

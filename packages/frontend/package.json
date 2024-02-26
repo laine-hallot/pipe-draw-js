@@ -1,0 +1,24 @@
+{
+  "name": "@pipedrawjs/frontend",
+  "version": "1.0.0",
+  "description": "UI for PipeDrawJs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "start": "npm run watch",
+    "serve": "webpack serve"
+  },
+  "author": "Laine Hallot",
+  "license": "ISC",
+  "devDependencies": {
+    "@webpack-cli/generators": "*",
+    "css-loader": "*",
+    "electron": "*",
+    "html-webpack-plugin": "*",
+    "ts-loader": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}
