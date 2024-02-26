@@ -9,6 +9,7 @@ At the moment this is repo is almost completely undocumented and just generally 
 ## Usage
 
 **You'll need to build the frontend and generate an electron binary first!!**
+
 Just provide a png with stdin.
 
 ```sh
